@@ -7,9 +7,14 @@
     "ios": "react-native run-ios",
     "lint": "eslint .",
     "start": "react-native start",
-    "test": "vitest"
+    "test": "vitest",
+    "clean:android": "cd android && ./gradlew clean",
+    "debug:android": "cd android && ./gradlew assembleDebug",
+    "release:android": "cd android && ./gradlew assembleRelease",
+    "release:play": "cd android && ./gradlew bundleRelease"
   },
   "dependencies": {
+    "@react-native-async-storage/async-storage": "^1.18.1",
     "@react-navigation/native": "^6.1.6",
     "@react-navigation/native-stack": "^6.9.12",
     "nativewind": "^2.0.11",
@@ -18,7 +23,8 @@
     "react-native-safe-area-context": "^4.5.0",
     "react-native-screens": "^3.20.0",
     "react-native-splash-screen": "^3.3.0",
-    "react-navigation-helpers": "^2.2.0"
+    "react-navigation-helpers": "^2.2.0",
+    "zustand": "^4.3.7"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",
