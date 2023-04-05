@@ -1,4 +1,5 @@
-import { Button, SafeAreaView, TextInput } from 'react-native'
+import { SafeAreaView } from 'react-native'
+import { Button, TextInput } from 'react-native-paper'
 import { useMainStore } from '~/store'
 const HomeScreen = ({ navigation }) => {
   const userData = useMainStore(state => state.userData)
@@ -11,16 +12,17 @@ const HomeScreen = ({ navigation }) => {
   return (
     <SafeAreaView>
       <TextInput
+        className='mb-2'
         placeholder='please enter your username'
         onChangeText={setUserName}
         value={userData?.name}
       />
       <Button
-        title="Go to  profile"
+        mode="contained"
         onPress={() =>
           navigation.navigate('Profile', { name: userData?.name })
         }
-      />
+      >Go to  profile</Button>
     </SafeAreaView>
 
   )
