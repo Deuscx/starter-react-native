@@ -10,3 +10,7 @@
 - Storage
   - [react-native-async-storage/async-storage: An asynchronous, persistent, key-value storage system for React Native.](https://github.com/react-native-async-storage/async-storage)
   - Fine More： https://reactnative.directory/?search=storage
+
+## Release Pkg
+- pre: follow this tutorial: [Publishing to Google Play Store · React Native](https://reactnative.dev/docs/signed-apk-android)
+- run script `release:android`
